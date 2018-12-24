@@ -1,0 +1,1509 @@
+{
+	"info": {
+		"_postman_id": "daaaf0b3-8c86-431e-a78a-ff978a9bca6b",
+		"name": "OpenWeatherMap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "By city name 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1ce0b61-7df3-4e0a-946e-e9fc5d92ac0a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/weather?q=Kiev&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kiev"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By sity name Negative 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1ce0b61-7df3-4e0a-946e-e9fc5d92ac0a",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/weather?q=Kiew&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kiew"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By city name 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1ce0b61-7df3-4e0a-946e-e9fc5d92ac0a",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/weather?q=Kiev,UA&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kiev,UA"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By sity name Negative 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b99b7222-ac25-4856-9e80-dca0fc64f340",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/weather?q=Kiev,UK&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Kiev,UK"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By city ID 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e61d3824-ff90-4374-a8ae-72e62f12d981",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/weather?id=703448&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703448"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By sity ID Negative 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "741de7e6-d33d-4a47-aadb-625c78e28dd7",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/weather?id=112266&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "112266"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By geographic coordinates 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2e9581ca-2fa5-44c1-827b-98f5c27166ab",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}\\/weather?lat=50.433334&lon=30.516666&{{apiid}}",
+					"host": [
+						"{{baseurl}}\\"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50.433334"
+						},
+						{
+							"key": "lon",
+							"value": "30.516666"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By geographic coordinates Negative 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "837b5dbc-1bbc-4b18-a2c0-7c75792bac56",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}\\/weather?lat=0122.000334&lon=0122.016006&{{apiid}}",
+					"host": [
+						"{{baseurl}}\\"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "0122.000334"
+						},
+						{
+							"key": "lon",
+							"value": "0122.016006"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By ZIP code 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "edc9461c-f8cc-475f-bbcb-8650c7423367",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/weather?zip=03142,ua&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "03142,ua"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By ZIP code Negative 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc760b88-bf1d-4315-84ba-f8d06ba5ce13",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/weather?zip=03142,uk&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "03142,uk"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "By ZIP code Negative 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5c7bb0f3-e1d1-4143-b547-fa2acf87efaa",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/weather?zip=031421,ua&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "031421,ua"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities within a rectangle zone 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e21bca0e-4d5f-4b5e-a995-861760539668",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/box/city?bbox=31,50,33,53,10&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "31,50,33,53,10"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities within a rectangle zone 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e21bca0e-4d5f-4b5e-a995-861760539668",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/box/city?bbox=31,50,33,53,10&callback&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "31,50,33,53,10"
+						},
+						{
+							"key": "callback",
+							"value": null
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities within a rectangle zone 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e21bca0e-4d5f-4b5e-a995-861760539668",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/box/city?bbox=31,50,33,53,10&cluster=yes&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "31,50,33,53,10"
+						},
+						{
+							"key": "cluster",
+							"value": "yes"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities within a rectangle zone  4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e21bca0e-4d5f-4b5e-a995-861760539668",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/box/city?bbox=31,50,33,53,10&lang=ua&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "31,50,33,53,10"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities within a rectangle zone 5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e21bca0e-4d5f-4b5e-a995-861760539668",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/box/city?bbox=31,50,33,53,10&lang=ru&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "31,50,33,53,10"
+						},
+						{
+							"key": "lang",
+							"value": "ru"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities in cycle 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c3f79a4e-6154-4cfd-8fa1-422adba7e782",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/find?lat=50&lon=30&cnt=5&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50"
+						},
+						{
+							"key": "lon",
+							"value": "30"
+						},
+						{
+							"key": "cnt",
+							"value": "5"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities in cycle 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "52c9a521-f535-409c-bb72-1c0e477fcf16",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/find?lat=50&lon=30&cnt=5&lang=ua&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50"
+						},
+						{
+							"key": "lon",
+							"value": "30"
+						},
+						{
+							"key": "cnt",
+							"value": "5"
+						},
+						{
+							"key": "lang",
+							"value": "ua"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities in cycle 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "577b4f3d-f3b5-4350-9136-ac91a0f7dac9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/find?lat=50&lon=30&cnt=5&cluster=yes&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50"
+						},
+						{
+							"key": "lon",
+							"value": "30"
+						},
+						{
+							"key": "cnt",
+							"value": "5"
+						},
+						{
+							"key": "cluster",
+							"value": "yes"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities in cycle 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/find?lat=50&lon=30&cnt=5&callback&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50"
+						},
+						{
+							"key": "lon",
+							"value": "30"
+						},
+						{
+							"key": "cnt",
+							"value": "5"
+						},
+						{
+							"key": "callback",
+							"value": null
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities in cycle boundary 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/find?lat=50&lon=30&cnt=50&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50"
+						},
+						{
+							"key": "lon",
+							"value": "30"
+						},
+						{
+							"key": "cnt",
+							"value": "50"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities in cycle boundary negative 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe68352b-45da-41e8-994e-811fe8f077c8",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/find?lat=50&lon=30&cnt=51&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50"
+						},
+						{
+							"key": "lon",
+							"value": "30"
+						},
+						{
+							"key": "cnt",
+							"value": "51"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities in cycle Negative 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "28a19371-5910-4f54-b08e-78a8dc03c80a",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/find?lat=505&lon=305&cnt=5&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "505"
+						},
+						{
+							"key": "lon",
+							"value": "305"
+						},
+						{
+							"key": "cnt",
+							"value": "5"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities in cycle Negative 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0b33cc9-7daf-4eff-8ae8-60cb7f42db38",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/find?lat=50&lon=305&cnt=5&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "50"
+						},
+						{
+							"key": "lon",
+							"value": "305"
+						},
+						{
+							"key": "cnt",
+							"value": "5"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Call for several city ID 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "65eed29d-a7fa-4e8c-8f10-5ed9bb88f1d8",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/group?id=703448,699996,696877&units=metric&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"group"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703448,699996,696877"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Call for several city ID negative 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "65eed29d-a7fa-4e8c-8f10-5ed9bb88f1d8",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/group?id=703448,002200,696877&units=metric&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"group"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703448,002200,696877"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Call for several city ID boundary 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6fd1b20e-2855-4bd1-b497-002b18e2ad3c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/group?id=703448,699996,696877,703863,815919,688533,712160,712374,713101,711487,710878,710425,709716,693272,699318,699072,703498,711743,691919&units=metric&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"group"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703448,699996,696877,703863,815919,688533,712160,712374,713101,711487,710878,710425,709716,693272,699318,699072,703498,711743,691919"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Call for several city ID boundary 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6fd1b20e-2855-4bd1-b497-002b18e2ad3c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/group?id=703448,699996,696877,703863,815919,688533,712160,712374,713101,711487,710878,710425,709716,693272,699318,699072,703498,711743,691919,704201&units=metric&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"group"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703448,699996,696877,703863,815919,688533,712160,712374,713101,711487,710878,710425,709716,693272,699318,699072,703498,711743,691919,704201"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Call for several city ID boundary 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6fd1b20e-2855-4bd1-b497-002b18e2ad3c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/group?id=703448&units=metric&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"group"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703448"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Call for several city ID boundary negative 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6fd1b20e-2855-4bd1-b497-002b18e2ad3c",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/group?id=703448,699996,696877,703863,815919,688533,712160,712374,713101,711487,710878,710425,709716,693272,699318,699072,703498,711743,691919,704201,687825&units=metric&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"group"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703448,699996,696877,703863,815919,688533,712160,712374,713101,711487,710878,710425,709716,693272,699318,699072,703498,711743,691919,704201,687825"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Call for several city ID boundary negative 1 Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6fd1b20e-2855-4bd1-b497-002b18e2ad3c",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseurl}}/group?id=703448,699996,696877,703863,815919,688533,712160,712374,713101,711487,710878,710425,709716,693272,699318,699072,703498,711743,691919,704201,687825,691462&units=metric&{{apiid}}",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"group"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "703448,699996,696877,703863,815919,688533,712160,712374,713101,711487,710878,710425,709716,693272,699318,699072,703498,711743,691919,704201,687825,691462"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "{{apiid}}",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
